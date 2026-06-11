@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetroSim Tehran</title>
 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🚇 MetroSim Tehran</h1>
+    <p>شبیه‌ساز حرکت در خط ۱ متروی تهران</p>
+</header>
+
+<main class="container">
+
+    <section class="card">
+
+        <label>ایستگاه مبدا</label>
+        <select id="origin"></select>
+
+        <label>ایستگاه مقصد</label>
+        <select id="destination"></select>
+
+        <label>ساعت شروع سفر</label>
+        <input type="time" id="startTime">
+
+        <button id="startBtn">
+            شروع شبیه‌سازی
+        </button>
+
+    </section>
+
+    <section class="card results">
+
+        <h2>اطلاعات سفر</h2>
+
+        <div class="info-row">
+            <span>ایستگاه فعلی:</span>
+            <strong id="currentStation">-</strong>
+        </div>
+
+        <div class="info-row">
+            <span>ایستگاه بعدی:</span>
+            <strong id="nextStation">-</strong>
+        </div>
+
+        <div class="info-row">
+            <span>زمان باقی‌مانده:</span>
+            <strong id="remainingTime">-</strong>
+        </div>
+
+        <div class="info-row">
+            <span>ایستگاه‌های باقی‌مانده:</span>
+            <strong id="remainingStations">-</strong>
+        </div>
+
+    </section>
+
+    <section class="card">
+
+        <h2>نقشه خط ۱</h2>
+
+        <div id="metroMap">
+
+            <div id="metroLine">
+                <div id="trainMarker"></div>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="app.js"></script>
+
+</body>
+</html>
